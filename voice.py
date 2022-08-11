@@ -40,14 +40,14 @@ class Polly:
     def save_audio(self, response):
         output_path = "./output"
         output_file = "output.mp3"
-        file = output_path + "/" + output_file
+        output = os.path.join(output_path, output_file)
 
-        if os.path.isfile(output_file):
-            os.remove (output_file)
+        if os.path.isfile(output):
+            os.remove(output)
 
         if "AudioStream" in response:
             with closing(response["AudioStream"]) as stream:
-                output = os.path.join(output_path, output_file)
+
 
                 try:
                     with open(output, "wb") as file:
