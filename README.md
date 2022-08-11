@@ -16,7 +16,7 @@ export AWS_PROFILE=xxxx
 
 読み上げたい文書を設定する。日本語に固定している
 
-例: Hello World
+例: こんにちは
 
 ```
 python ./voice.py say "こんにちは"
